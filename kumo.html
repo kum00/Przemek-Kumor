@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action=""method="POST">
+        <input type="number" name="liczba1" placeholder="wpisz pierwsza liczbe"/>
+      
+        <input type="submit" value="oblicz">
+           </form> 
+           <div class="wynik"></div>
+           <script>
+               const formularz =document.querySelector('form');
+               const diw =document.querySelector('.wynik');
+               formularz.addEventListener('submit' , (e)=>{
+                   e.preventDefault();
+                const l1 = document.querySelector('input[name="liczba1"]').value;
+                 if(l1 %2 == 0){
+                  diw.textContent =`liczba ${l1} jest parzysta`;
+               } else {
+                     diw.textContent =`liczba ${l1} jest nieparzysta`;
+               }
+        
+        
+        
+               });
+               
+           
+           </script>
+</body>
+</html>
